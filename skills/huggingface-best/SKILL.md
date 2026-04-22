@@ -1,5 +1,5 @@
 ---
-name: best
+name: huggingface-best
 description: >
   Use when the user asks about finding the best, top, or recommended model for a task,
   wants to know what AI model to use, or wants to compare models by benchmark scores.
