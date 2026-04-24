@@ -9,7 +9,7 @@ The Hugging Face Hub CLI tool `hf` is available. IMPORTANT: The `hf` command rep
 
 Use `hf --help` to view available functions. Note that auth commands are now all under `hf auth` e.g. `hf auth whoami`.
 
-Generated with `huggingface_hub v1.11.0`. Run `hf skills add --force` to regenerate.
+Generated with `huggingface_hub v1.12.0`. Run `hf skills add --force` to regenerate.
 
 ## Commands
 
@@ -31,13 +31,13 @@ Generated with `huggingface_hub v1.11.0`. Run `hf skills add --force` to regener
 
 ### `hf buckets` — Commands to interact with buckets.
 
-- `hf buckets cp SRC` — Copy files to or from buckets. `[--quiet]`
-- `hf buckets create BUCKET_ID` — Create a new bucket. `[--private --exist-ok --quiet]`
-- `hf buckets delete BUCKET_ID` — Delete a bucket. `[--yes --missing-ok --quiet]`
-- `hf buckets info BUCKET_ID` — Get info about a bucket. `[--quiet]`
-- `hf buckets list` — List buckets or files in a bucket. `[--human-readable --tree --recursive --format CHOICE --quiet]`
-- `hf buckets move FROM_ID TO_ID` — Move (rename) a bucket to a new name or namespace.
-- `hf buckets remove ARGUMENT` — Remove files from a bucket. `[--recursive --yes --dry-run --include TEXT --exclude TEXT --quiet]`
+- `hf buckets cp SRC` — Copy files to or from buckets. `[--format CHOICE]`
+- `hf buckets create BUCKET_ID` — Create a new bucket. `[--private --exist-ok --format CHOICE]`
+- `hf buckets delete BUCKET_ID` — Delete a bucket. `[--yes --missing-ok --format CHOICE]`
+- `hf buckets info BUCKET_ID` — Get info about a bucket. `[--format CHOICE]`
+- `hf buckets list` — List buckets or files in a bucket. `[--human-readable --tree --recursive --search TEXT --format CHOICE]`
+- `hf buckets move FROM_ID TO_ID` — Move (rename) a bucket to a new name or namespace. `[--format CHOICE]`
+- `hf buckets remove ARGUMENT` — Remove files from a bucket. `[--recursive --yes --dry-run --include TEXT --exclude TEXT --format CHOICE]`
 - `hf buckets sync` — Sync files between local directory and a bucket. `[--delete --ignore-times --ignore-sizes --plan TEXT --apply TEXT --dry-run --include TEXT --exclude TEXT --filter-from TEXT --existing --ignore-existing --verbose --quiet]`
 
 ### `hf cache` — Manage local cache directory.
@@ -151,7 +151,7 @@ Generated with `huggingface_hub v1.11.0`. Run `hf skills add --force` to regener
 ### `hf spaces` — Interact with spaces on the Hub.
 
 - `hf spaces dev-mode SPACE_ID` — Enable or disable dev mode on a Space. `[--stop]`
-- `hf spaces hot-reload SPACE_ID` — Hot-reload any Python file of a Space without a full rebuild + restart. `[--local-file TEXT --skip-checks --skip-summary]`
+- `hf spaces hot-reload SPACE_ID` — Hot-reload any Python file of a Space without a full rebuild + restart. `[--local-file PATH --skip-checks --skip-summary]`
 - `hf spaces info SPACE_ID` — Get info about a space on the Hub. `[--revision TEXT --expand TEXT --format CHOICE]`
 - `hf spaces list` — List spaces on the Hub. `[--search TEXT --author TEXT --filter TEXT --sort CHOICE --limit INTEGER --expand TEXT --format CHOICE]`
 - `hf spaces logs SPACE_ID` — Fetch the run or build logs of a Space. `[--build --follow --tail INTEGER]`
